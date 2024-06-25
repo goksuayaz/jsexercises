@@ -455,6 +455,369 @@ TODO: Ya ben
 
 
 
+// let sayac=0;
+
+// while(sayac<=10){
+//     if(sayac%2==0){
+//         console.log(sayac);
+//     }
+//     sayac++;
+// }
+
+
+
+// let sayac=1;
+
+// while(true){
+//     console.log(sayac);
+
+//     if(sayac==7){
+//         break;
+//     }
+//     sayac++;
+
+// }
+
+
+
+// let sayac=1;
+
+// do {
+//     console.log(sayac);
+//     sayac++;
+    
+// } while (sayac<=10);
+
+
+
+
+// let yas=23;
+
+// do {
+//     console.log("Ehliyeti alabilirsiniz");
+
+// } while (yas>=25);
+
+
+
+
+
+
+// let sayac=1;
+// let toplam=0;
+
+// do 
+// if(sayac%2==1){
+//     toplam+=sayac;
+    
+// } while (sayac<=20);
+
+// console.log("Toplam :", toplam);
+
+
+
+
+
+
+
+// let sayac=1;
+
+// while(sayac<=10){
+//     console.log(sayac);
+//     if(sayac==8){
+//         break;
+//     }
+//     sayac++;
+// }
+
+
+
+
+
+
+
+// let sayac=0;
+
+// while(sayac<=10){
+//     sayac++;
+//     if(sayac>10){
+//         break;
+//     }
+
+//     if(sayac==8){
+//         continue;
+//     }
+//     console.log(sayac);
+// }
+
+
+
+
+
+
+
+
+// for(let i=1; i<=10; i++){
+//     for(let j=1;Ü j<=10; j++){
+//         console.log(i+"x" + j + "=" + (i+j));
+
+//     }
+
+//     console.log("-----------------------------");
+
+// }
+
+
+
+
+
+// let a= Math.floor(7.7);
+
+// console.log(a/2);
+
+
+// let sayi=Number(prompt("Lütfen bir sayı giriniz :"));
+// let sonuc=true;
+
+// for(let i=2; i<=Math.floor(sayi/2); i++){
+//     if(sayi%i==0){
+//         sonuc=false;
+//         break;
+
+//     }
+
+// }
+
+// if(sonuc){
+//     alert(sayi + " asaldır. ");
+
+// }else{
+//     alert(sayi + " asal değildir!");
+
+// }
+
+
+
+
+
+
+
+
+
+// let sayi=Number(prompt("Bir sayı giriniz :"));
+// let carpim=1;
+
+// for(let i=1; i<=sayi; i++){
+
+//     carpim=carpim*i;
+
+// }
+// alert("Sonuç : " + carpim);
+
+
+
+
+
+
+
+// function yazdir(){
+//     console.log("Goksu");
+
+// }
+// yazdir(); //istediğin kadar yazabilirsin.
+
+
+// function topla(){
+//     console.log(5+7);
+
+// }
+
+// topla();
+
+
+// function topla(sayi1, sayi2){
+//     console.log(5+7);
+
+    
+// }
+
+
+
+
+
+
+
+
+
+// function yazdir(isim, soyisim){
+
+//     console.log(isim + " " + soyisim);
+
+// }
+
+
+// debugger;
+// yazdir("Goksu", "Ayaz");
+// yazdir("G", "A");
+
+
+
+
+
+// cube(5);
+// cube(3);
+
+// function cube(sayi){
+//     console.log(sayi*sayi*sayi);
+// }
+
+
+
+
+
+
+
+
+// let yas=Number(prompt("Yaşınızı giriniz :"));
+
+
+// function kontrolEt(yas){
+//     if(yas>18){
+//         console.log("Ehliyeti alabilirsiniz");
+//     }else{
+//         console.log("Ehliyeti alamazsınız");
+//     }
+
+// }
+
+// kontrolEt(yas);
+
+
+
+
+
+
+
+
+// let donenDeger = cube(2);
+// kareAl(donenDeger);
+
+// function kareAl(sayi){
+//     let sonuc= sayi*sayi;
+//     console.log(sonuc);
+
+// }
+
+// function cube(sayi){
+//     let sonuc= sayi*sayi*sayi;
+//     return sonuc;  
+//     console.log("Goksu");
+    //returnden sonra yazdığın her kod erişilmez olur.
+
+// }
+ 
+ 
+ //   Return, bir değeri metodun dışarısına çıkarmak için kullanılır. Metodun çağrıldığı yere döner.En başa gidiyor(cube 2)
+
+
+
+
+
+
+
+
+
+
+
+//  let metin = "Şu anda Javascript eğitimi almaktayım.";
+
+//  let harf= prompt("Harf giriniz");
+
+//  let sonuc=bul(harf);
+//  alert("Harf Sayısı : " + sonuc);
+
+
+
+//  let toplam=0;
+
+//  function bul(harf){
+
+//     for(let i=0; i<metin.length; i++){
+//         if(metin.charAt(i)=== harf){
+//             toplam+=1;
+
+
+//         }
+
+//     }
+
+//     return toplam;
+//  }
+
+// return metodun çağrıldığı yere dönüyor. let sonuc = bul(harf); 
+// büyük-küçük hassasiyeti olsun istemiyorsan toLowerCase metodunu kullanabilirsin. harf.toLowerCase())
+//charAt indeks değerini veriyor.
+
+
+
+
+
+
+
+
+// isPerfectNumber(5);
+
+
+// function isPerfectNumber(number){
+
+//     let toplam=0;
+
+//     for(let i=2; i<=number/2; i++){
+
+//         if(number%i==0){
+//             toplam+=i;
+//         }
+//     }
+
+//     toplam+=1+number;
+
+//     if(toplam==number*2){
+//         console.log("Mükemmel Sayıdır.")
+//     }else{
+//         console.log("Mükemmel Sayı Değildir.");
+//     }
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
