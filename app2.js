@@ -552,6 +552,372 @@
 
 
 // }
+// console.log(ul);
+
+
+
+
+
+
+//MOUSE EVENTLARI
+
+// DOMContentLoaded
+//load
+//click
+//dblclick
+//mouseover
+//mouseout
+//mouseenter
+//mousedown
+
+
+
+// document.addEventListener("DOMContentLoaded", run);
+
+// function run(){
+//     alert("Sayfa Yüklendi");
+//     console.log("Sayfa Yüklendi");
+// }
+
+
+
+// document.addEventListener("onload", run);
+
+
+
+
+// window.addEventListener("load", run);
+
+// function run(){
+//     console.log("Sayfa Yüklendi");
+
+
+// }
+
+
+
+
+// const cardTitle = document.querySelectorAll(".card-title")[1];
+
+// cardTitle.addEventListener("click", run);
+
+
+// function run(e){
+//     console.log(e.type);
+// }
+
+
+
+// const cardTitle = document.querySelectorAll(".card-title")[1];
+
+// cardTitle.addEventListener("dblclick", run);
+
+
+// function run(e){
+//     console.log(e.type);
+// }
+
+
+
+// const cardBody = document.querySelectorAll(".card-body")[1];
+
+// cardBody.addEventListener("mouseover", run);
+// cardBody.addEventListener("mouseout", run);
+// cardBody.addEventListener("mouseenter", run);
+// cardBody.addEventListener("mouseleave", run);
+
+
+
+// card ın içine girdiğinde mouseover, dışına çıktığımızda mouseout tetiklenir.
+
+// function run(e){
+//     console.log(e.type);
+// }
+
+
+
+
+//KLAVYE EVENTLARI
+
+//keypress
+//keydown
+//keyup
+
+
+
+
+// document.addEventListener("keypress", run);
+
+// function run(e){
+//     console.log(e.type);
+//console.log(e.key);
+// console.log(e.keyCode);
+// }
+
+// basmıs oldugumuz tusu vermek istiyorsan e.key diyebilirsin.
+// harflerin sayı karşılığını keyCode veriyor. Bu da // console.log(e.which);
+
+//keypress: Harf ve sayılarda tetiklenen event.
+
+
+
+//document.addEventListener("keydown", run);
+//tüm klavye işlemlerinde çalışır.
+
+
+//keyup: Tuştan elini kaldırdığında çalışıyor.
+
+// document.addEventListener("keyup", run);
+
+
+// document.addEventListener("keydown", run);
+
+// function run(e){
+//     console.log(e.keyCode);
+//     if(e.keyCode == 116){
+//         alert("Sayfa yenileme engellendi!");
+//     }
+//     e.preventDefault();
+// }
+
+
+//F5 engelleniyor bu sekılde.
+
+
+
+
+
+
+
+
+// const cardTitle = document.querySelectorAll(".card-title")[0];
+
+// const input = document.querySelector("#todoName");
+
+// input.addEventListener("keyup", run);
+
+
+// function run(e){
+//     cardTitle.textContent=e.target.value;
+//     console.log(e.target.value);
+
+
+// }
+
+
+//cardtitle ın değerini html etiketi içerisindeki değeri yakalamak için value kullanıyoruz.
+
+
+
+
+//INPUT EVENTLARI
+
+//focus
+//blue
+//copy
+//paste
+//cut
+//select
+
+
+// const todo = document.querySelector(#todoName);
+
+
+// todo.addEventListener("focus", run);
+// todo.addEventListener("blur", run);
+
+
+// function run(e){
+//     console.log(e.type);
+
+// }
+
+//input un içine imleci girdiğinde focus çalışmaya başlar.
+
+//input un dışına çıktığında blur tetiklenir.
+
+
+
+
+
+// todo.addEventListener("copy", run);
+
+
+//inputun içindeki text i kopyaladığında copy tetiklenir.
+
+
+// todo.addEventListener("paste", run);
+
+//inputun içine kopyaladığımızı yapıştırdığımızda tetiklenir.
+
+// todo.addEventListener("cut", run);
+
+//bu da input un içindekini kestiğinde cut tetiklenir.
+
+
+// todo.addEventListener("select", run);
+//inputun içindeki text i seçtiüimde select çalışır.
+
+
+
+
+
+
+//Session Storage
+
+// console.log(window);
+// window objesinin altında localStorage ve sessionStorage var.
+
+
+
+//Değer Ekleme
+// sessionStorage.setItem("350", "Enes");
+// sessionStorage.setItem("216", "Yasin");
+
+// sessionStorage.setItem("154", "Bilal");
+// sessionStorage.setItem(552, 37);
+
+
+//Değer silmek için
+//sessionStorage.removeItem("154");
+
+
+//let value = sessionStorage.getItem("700");
+
+// if(value === null){
+//     console.log("Değer bulunamadı.");
+// }else{
+//     console.log("Değer bulundu :", value);
+
+// }
+//console.log(value);
+
+
+//Hepsini Silme
+//sessionStorage.clear();
+
+
+//let value = sessionStorage.getItem(552);
+// console.log(value); //type ı string olur int çıkmaz. 
+
+//storage değerleri string oluyor.
+
+
+
+
+
+//Session Storage - Array Yazdırma
+//let names =["Ali", "Enes", "Kübra", "Adem", "Ayşe"];
+
+// sessionStorage.setItem("names", names);
+
+// let value = sessionStorage.getItem("names");
+// console.log(value);  
+//array verdik yine string verdi.
+//bunun için JSON.stringify array gibi yazmamızı sağlıyor.
+
+//sessionStorage.setItem("names", JSON.stringify(names)); ve let value =JSON.parse(sessionStorage.getItem("names"));
+//array gibi görünen string olmaması için JSON.parse verdik.
+
+
+//value.forEach(function(name){
+// console.log(name);
+
+//taraycıyı kapattığımızda session storage taki değerler silinir.
+
+
+
+
+//Local Storage : Session Storage tan bir farkı yok.
+
+// localStorage.setItem("motion1","Push");
+// localStorage.setItem("motion2","Barfix");
+// localStorage.setItem("motion3","Squat");
+// localStorage.setItem("motion4","Pull");
+
+ //Değeri Almak
+
+// let value = localStorage.getItem("motion1");
+// console.log(value);
+
+//localStorage.removeItem("motion4");
+//Tümünü Temizle
+//localStorage.clear();
+
+// let motions = ["Push", "Barfix", "Squat"];
+
+// localStorage.setItem("motions", JSON.stringify(motions));
+
+//let value = JSON.parse(localStorage.getItem("motions"));
+// console.log(value);
+
+
+//value.forEach(function(motion){
+// console.log(motion);
+// });
+
+
+//local storage taki veriler tarayıcıyı kapatsan da silinmiyor.
+
+
+
+
+
+//To DO List Projesi
+
+//Tüm elementleri seçmek
+
+const form = document.querySelector("#todoAddForm");
+const addInput = document.querySelector("#todoName");
+const todoList = document.querySelector(".list-group");
+const firstCardBody = document.querySelectorAll(".list-group")[0];
+const secondCardBody = document.querySelectorAll(".list-group")[1];
+const clearButton = document.querySelector("#clearButton");
+
+
+runEvents();
+function runEvents(){
+    form.addEventListener("submit", addTodo);
+
+}
+
+
+// function addTodo(e){
+//const inputText = addInput.value.trim();
+// if(inputText == null || inputText==""){
+//     alert("Lütfen bir değer giriniz!");
+// }else{
+  //Arayüze ekleme
+//     addTodoToUI(inputText);
+
+// }
+    //Arayüze ekleme
+    //Storage ekleme
+//     console.log("Submit eventi çalıştı");
+//     e.preventDefault();
+// }
+
+
+// function addTodoToUI(newTodo){
+//     const li = document.createElement("li");
+//     li.className="list-group-item ...";
+//     li.textContent = newTodo;
+
+//     const a = document.createElement("a");
+//     a.href="#";
+//     a.className="delete-item";
+
+
+//     const i = document.createElement("i");
+//     i.className = "fa fa-remove";
+
+//     a.appendChişd(i);
+//     li.appendChild(a);
+//     todoList.appendChild(li);
+
+//     addInput.value="";
+
+// }
 
 
 
@@ -599,7 +965,13 @@
 
 
 
-console.log(ul);
+
+
+
+
+
+
+
 
 
 
