@@ -687,9 +687,6 @@
 
 
 
-
-
-
 // const cardTitle = document.querySelectorAll(".card-title")[0];
 
 // const input = document.querySelector("#todoName");
@@ -706,7 +703,6 @@
 
 
 //cardtitle ın değerini html etiketi içerisindeki değeri yakalamak için value kullanıyoruz.
-
 
 
 
@@ -762,7 +758,6 @@
 
 
 
-
 //Session Storage
 
 // console.log(window);
@@ -801,8 +796,6 @@
 // console.log(value); //type ı string olur int çıkmaz. 
 
 //storage değerleri string oluyor.
-
-
 
 
 
@@ -861,34 +854,73 @@
 
 
 
-
-
 //To DO List Projesi
 
 //Tüm elementleri seçmek
 
-const form = document.querySelector("#todoAddForm");
-const addInput = document.querySelector("#todoName");
-const todoList = document.querySelector(".list-group");
-const firstCardBody = document.querySelectorAll(".list-group")[0];
-const secondCardBody = document.querySelectorAll(".list-group")[1];
-const clearButton = document.querySelector("#clearButton");
+// const form = document.querySelector("#todoAddForm");
+// const addInput = document.querySelector("#todoName");
+// const todoList = document.querySelector(".list-group");
+// const firstCardBody = document.querySelectorAll(".card-body")[0];
+// const secondCardBody = document.querySelectorAll(".card-body")[1];
+// const clearButton = document.querySelector("#clearButton");
+
+//console.log(firstCardBody);
+// let todos=[];
 
 
-runEvents();
-function runEvents(){
-    form.addEventListener("submit", addTodo);
+// runEvents();
+// function runEvents(){
+//     form.addEventListener("submit", addTodo);
+//document.addEcentListener("DOMContentLoaded", pageLoaded);
+//secondCardBody.addEventListener("click", removeTodoToUI );
 
-}
+// }
+
+//function pageLoaded(){
+// checkTodosFromStorage();
+// todos.forEach(function(todo){
+// addTodoToUI(todo);
+//   console.log(todo);
+// });
+// }
+
+
+// function removeTodoToUI(e){
+//if(e.target.className==="fa fa-remove"){
+//Ekrandan Silme
+// const todo = e.target.parentElement.parentElement; 
+//todo.remove();
+
+//Storage'dan Silme
+//removeTodoStorage(todo.textContent);
+// showAlert("success", "Todo başarıyla silindi.");
+// }
+// }
+
+//function removeTodoToStorage(removeTodo){
+//checkTodosFromStorage();
+//todos.forEach(function(todo, index))  //todostaki istediğim değeri alabiliriz.
+// if(removeTodo===todo){
+  //todos.splice(index,1);  //Sildik
+// }
+// });
+
+// localStorage.setItem("todos", JSON.stringify(todos);)
+//}
+
 
 
 // function addTodo(e){
 //const inputText = addInput.value.trim();
 // if(inputText == null || inputText==""){
-//     alert("Lütfen bir değer giriniz!");
+//     showAlert("danger", "Lütfen boş bırakmayınız!");
 // }else{
   //Arayüze ekleme
 //     addTodoToUI(inputText);
+//addToDoStorage(inputText);
+//showAlert("success", "Todo Eklendi."); //1 tip 2 mesaj
+
 
 // }
     //Arayüze ekleme
@@ -911,13 +943,186 @@ function runEvents(){
 //     const i = document.createElement("i");
 //     i.className = "fa fa-remove";
 
-//     a.appendChişd(i);
+//     a.appendChild(i);
 //     li.appendChild(a);
 //     todoList.appendChild(li);
 
 //     addInput.value="";
 
+// 
+
+// function addTodoUI(newTodo){
+
 // }
+
+//function addToDoStorage(newTodo){
+// checkTodosFromStorage();
+//todos.push(newTodo);
+// localStorage.setItem("todos",JSON.stringify(todos));
+// }
+
+// if(localStorage.getItem("todos")===null){
+//   todos=[];
+
+// }else{
+//   todos=JSON.parse(localStorafe.getItem("todos"));
+
+
+// }
+
+// }
+
+// function checkTodosFromStorage(){
+//   if(localStorage.getItem("todos")===null){
+//     todos=[];
+//   }else{
+//     todos=JSON.parse(localStorage.getItem("todos"));
+//   }
+// }
+
+
+
+//bootstrapten alert kodu alıyoruz
+// function showAlert(type, message){
+//const div=document.createElement("div");
+//div.className="alert alert-" + type;
+//div.className='alert alert-${type};
+//div.textContent=message;
+
+//firstCardBody.appendChild(div);
+
+//setTimeout(function(){
+//div.remove();
+// },2500); 
+// }
+
+
+
+
+
+
+//EcmaScript
+
+
+//Arrow Function
+
+//function yazdir(){
+// console.log("Merhaba")
+// }
+// yazdir();
+
+//Ecma'dan önce bu şekilde yazılıyordu. Sonrasında
+
+//const yazdir = ()=>{
+//   console.log("merhaba");
+// }
+
+// yazdir();
+
+
+//function kullanmadan yazılıyor.
+
+
+
+//const yazdir = (firstName, lastName)=> {
+//console.log("Merhaba", firstName, lastName)
+//let a = 5;
+//console.log(a)
+//console.log("Goksu")
+// }
+// yazdir("Goksu","Ayaz");
+
+//Birden fazla satırdan olusan kod bloklarında süslü parantezler olmalı ama tek parametrelikse olmasa da olur.
+
+
+//const yazdir= (firstName)=>{
+
+  //console.log("Merhaba", firstName)
+// }
+
+// yazdir("Goksu");
+
+
+
+//const kupAl=x=> x*x*x  (return u de yazmaya gerek kalmadı)
+// veya const kareAl=(x)=> x*x
+// console.log("Değer", kupAl(3))
+
+
+
+
+//Destructing Kullanımı
+
+//let langs=["C#", "C++", "JavaScript", "Phyton"]
+
+// let lang1, lang2, lang3, lang4
+
+// lang1 =lang[0]
+// lang2= langs[1]
+// lang3 = langs[2]
+// lang4=langs[3]
+
+//yerine
+
+// [lang1, lang2, lang3, lang4] = langs    (c# lang1, c++ lang2, javascript lang3, phyton lang4)
+
+
+
+
+// console.log(lang1, lang2, lang3, lang4)
+
+
+//const hesapla=()=>{
+  //const toplam=a+b
+  // const cikar =a-b
+  //const carp=a*b
+  // const bol=a/b
+
+  // const dizi= [toplam, cikar, carp, bol]
+
+  // return dizi
+// }
+// let [a,b,c,d] = hesapla(10,2)
+// console.log(a,b,c,d)
+
+
+// const person ={
+//   firstName: "Goksu",
+//   lastName: "Ayaz",
+//   salary: 5000,
+//   age:23
+// }
+
+
+
+
+// let isim, soyisim, maas, yas
+
+// isim=person.firstName
+// soyisim =person.lastName
+//maas = person.salary
+//yas=person.age 
+
+//yada
+//let {firstName:isim, lastName:soyisim, salary:maas, age:yas} = person
+// console.log(isim, soyisim, maas, yas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
