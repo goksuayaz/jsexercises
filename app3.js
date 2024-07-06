@@ -212,7 +212,168 @@
 // }
 // }
 
+
+
 // newFunc()
+
+
+
+
+
+
+//const b = new Map([ ["a",5] ])
+//b.set('b', 6)
+//console.log(b.size)
+//console.log(b.delete("a"))
+
+
+// console.log(b)   a=> 5 b=>6
+
+
+
+
+
+
+// setTimeout(()=> {
+
+// console.log("gksu")
+// }, timeout);  timeout yerine sayı girilir. sayı kadar sonra işlem gerçekleştirilir.
+
+
+
+// setInterval(()=> {
+//     console.log("goksu")
+// }, 1000); burada yazan sure boslugu kadar bekler sonra tekrardan o surede yazdırmaya devam eder. 
+
+
+//let count=60
+//setInterval(()=> {
+//     count--
+// console.log(count)
+// }, 1000);
+//60 dan bir azalarak 1 saniye aralıklarla yazdırır.
+
+
+
+
+//let number=10.99999
+
+
+// console.log(Math.floor(number)   kucuk olan sayıya yuvarlar.
+
+
+
+// console.log(Math.ceil(number)) bir uste yuvarlar
+
+
+
+// console.log(Math.abs(number)) mutlak değerli alır.
+
+//console.log(Math.random() * 9) random sayı üretir fakat kusuratlı olur onune Math.floor dersek 0 9 arasında sayı uretır.
+
+
+//console.log(Math.pow(2,3)) 2 ustu 3 alır.
+
+
+//Console.log(Math.sqrt(16)) karekökünü alır.
+
+
+//console.log(new Date()) şu anki zamanı verir.
+
+//console.log(new Date(2025,10,19).getMonth())
+
+
+//axios? farklı bir sayfadan endpointler üzerinden verileri sayfama çekmek için kullanılabilir.
+
+//axios u once tanımlamak gerekiyor. 
+
+
+//terminale npm init -y dediğimizde package.json adında bir sayfa açar. npm i axios diyoruz daha sonrasında npm i nodemon yazıyoruz.
+
+//npm paketi indirdiğinde kaydetme işlemiyle birlikte kullanabiliyorsun.
+
+//console.log("1")
+// setTimeout(()=>{
+//     console.log("2")
+
+// }, 2000);
+//Consoole.log("3")
+
+
+
+//call back
+
+// console.log("1")
+// const functOne=(a,cb)=> {
+//     setTimeout(()=>
+//         cb(a)
+// },2000)
+
+// let val = funcOne("2", (val) => {
+//     console.log(val)
+
+
+// })
+
+// console.log("3")
+
+
+
+//Promise
+
+//const funcOne=(a)=>{
+//     return new Promise((resolve, reject) => {
+//         let status=true
+//         setTimeout(() =>{
+//             if(status) resolve(a)
+//                 reject("hata")
+
+//         },2000)
+//     })
+// }
+
+// let val=funcOne("2")
+
+// val.then((result) => {
+
+// }).catch((err) => {
+
+// }).catch((err) => {
+//     console.log(err)
+// });
+
+
+// console.log("3")
+
+//çıktı olarak 1 3 2 şeklinde gelir.
+
+//restcountries.com dan api ler alınabilir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
