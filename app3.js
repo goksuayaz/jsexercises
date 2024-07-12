@@ -352,6 +352,344 @@
 
 
 
+//Spread
+
+//let numbers=[10,20,30,40]
+//function add(a,b,c,d){
+
+// console.log(a+b+c+d)
+// }
+
+//add(10,20,30,40)
+
+//Eski Yöntem
+//add(numbers[0], numbers[1], numbers[2], numbers[3])
+
+
+//Yeni Yöntem
+//add(...numbers)
+//...numbers ---numbers[0], numbers[1], numbers[2], numbers[3]
+
+
+
+//const diller1 =["Java", "C#"]
+//const diller2 =["Php", "Phyton", diller1[0], diller1[1]]
+
+//const diller2=["Php", "Phyton", ...diller1]
+
+//console.log(diller2)
+
+//const numbers = [1,2,3,4,5,6,7,8,9]
+
+//let[a,b, ...kalanSayilar] = numbers
+//console.log(a,b, kalanSayilar)
+
+//const array1 = ["G", "O", "K", "S", "U"]
+//let array2 = []
+
+
+//array2[0] = array1[0]
+//array2[1] = array1[1]
+//array2[2] = array1[2]
+//array1[3] = array1[3]
+
+
+
+//const array2=[array1[0], array1[1], array1[2], array1[3]] yerine
+
+//const array2=[...array1] bu kullanım spread
+
+//array2=[...array1]
+//console.log(array2)
+
+
+//For in-For of
+
+//let names =["E", "F", "G", "H", "C"];
+
+//names.forEach(function(name)){
+// console.log(name)
+
+// })
+//aynısı
+ //names.forEach((name) =>{
+//     console.log(name)
+// })
+
+
+//tek satırdan olusuyorsa suslu parantezlerı sileriz, oval parantezleri de.
+//names.forEach(name=> console.log(name)) kısa yazımı
+
+
+
+//For in Döngüsü
+//index numarası lazımsa
+//degiskenTanimlama, in, diziİsmi
+//for(let name in names){  names içindeki name ler
+// console.log(name, names[name])
+// }
+
+//For of Döngüsü
+//değeri lazımsa 
+//for(let isim of names){
+//console.log(isim)
+// }
+
+//indexini de almak istiyorsan console.log(isim, names.indexOf(isim))
+
+
+
+
+
+
+
+
+//MAP KULLANIMI
+
+
+//const map1=new Map();
+
+//SET
+//map1.set(1,"Goksu")
+//map1.set(true,5)
+//map1.set([1,2,3],{firstName : "Gks", lastName:"Bayram"})
+//map1.set(true,"5")
+
+
+//map1.set(34,"İstanbul")
+//map1.set(35,"İzmir")
+//map1.set(06,"Ankara")
+//map.set(01,"Adana")
+
+
+
+
+//GET  (key istiyor ve değer dönüyor)
+
+//console.log(map1.get(6))
+//console.log(map1.get(34))  - Istanbul
+
+//const donenDeger = map1.get(35)
+//console.log(donenDeger)
+//console.log(map1.get(35)
+
+
+
+//Size
+//value = map1.size;
+// console.log(value); -4
+
+
+
+
+//DELETE ( key veriliyor ve siliyor boolean döndürüyor)
+
+//value = map1.delete(34)
+// console.log(map1.size)  -3
+//console.log(value); -true
+
+
+
+
+//HAS
+//console.log(map1.has(55)) -false
+
+
+
+//For OF map üzerinde dönebiliriz.
+
+//for(let [key, value] of map1){
+// console.log(key,value)
+// }
+
+
+//for(let value of map1){
+// console.log(value)
+// }
+
+
+//let array = [34, 'İstanbul'];
+
+//let [a,b] = array;
+
+// console.log(a,b)
+
+
+
+//for(let [key, value] of map1){   Destructing
+// console.log(key, value)
+// }
+
+
+//let array =[34,'İstanbul'];
+//let [a,b]=array;
+//console.log(a,b)
+
+
+//const keys = map1.keys();
+//arraya cevirmek için const keys = Array.from(map1.keys())
+//console.log(keys)
+
+
+//keys.forEach((key)=>{
+    // console.log(key, map1.get(key))
+    // })
+
+
+//for(let key of map1.keys()){
+// console.log(key)
+// }
+
+
+
+//for(let value of map1.values()){
+//console.log(value)
+// }
+
+
+// let array = [1,2,3,4,5,6];
+
+
+//Mapten array'e çevirmek
+
+
+//const array2=[
+// [34,"İstanbul"],
+// [35, "İzmir"],
+// [06,"Ankara"],
+// [01, "Adana"]
+// ]   asagıdakının cıktısı bu sekılde oluyor.
+
+
+//const array = Array.from(map1);
+//console.log(map1)    
+
+//array.forEach((value)=>{
+    
+    // console.log(value[0], value[1])
+// })
+
+
+//Array'i mape çevirme
+
+//const array2 = [
+// [34,"İstanbul"],
+// [35,"İzmir"],
+// [06,"Ankara"],
+// [01,"Adana"]
+
+// ]
+
+//const myMap = new Map(array2)
+//console.log(myMap)
+
+//const myArray = Array.from(myMap);
+//console.log(myArray)
+
+
+
+//map1.set(34,"İstanbul")
+//map1.set(35,"İzmir")
+//map1.set(06,"Ankara")
+//map.set(01,"Adana")
+//map1.set([1,2,3], "Array")
+
+//console.log(map1.get([1,2,3]))   -undefined
+//tekrardan array olusturunca farklı yerleri gösterirler bu yüzden undefined.
+
+//let key=[1,2,3];
+//console.log(map1.get(key))  bunu bulur cunku aynı degıskenı kullanıyorsun.
+
+//mapler array lerin alternatifidir. key value değeri kullanılması map i farklı kılar. 
+
+
+
+//SET: birden fazla değeri tutamıyor.
+
+//Const set = new Set();
+
+//add metodu
+
+//set.add(true)
+//set.add(3.14)
+//set.add("Enes")
+//set.add(7)
+//set.add({username:"enes", password:"1"});
+// setInterval.add([1,2,3,4])
+
+
+
+
+//Size
+// console.log(set.size)
+
+
+//delete
+//Set.delete("Enes")
+//Set.delete(7)
+// set.delete([1,2,3,4]) bunu silemezsin referans tipli
+// console.log(set.size)
+
+
+
+//HAS
+//console.log(set.has("Enes")) Enes diye bir değer var mı true yada false döndürür.
+
+
+
+//For of döngüsü
+//for(let value of set){
+// console.log(value)
+// }
+
+
+
+//const values= Array.from(set);
+//values.forEach((value)=>{
+   
+//console.log(values)
+// })
+
+
+//const values = Array.from(set);
+
+
+//ARRAY DEN SET OLUŞTURMAK
+
+//let array = [1,"Enes", true, "Mustafa", 15, [1,2,3]]
+
+//Const newSet = new Set(array);
+
+// console.log(newSet)  
+//bir seti array e bir array i set e çevirebiliriz.
+//setlerin dizilerden farkı yok bir dizi çeşidi sadece alternatif olarak kullanılır.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
