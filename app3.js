@@ -668,6 +668,312 @@
 
 
 
+//Template Literals 
+
+//function write(firstName, lastName){
+// console.log("isim : " + firstName + " " + "Soyisim :" + lastName)
+
+//onun yerine
+//console.log(`İsim : ${firstName} Soyisim: ${lastName}`)
+// }
+
+//write("Enes", "Bayram")
+
+
+//function getUserById(userId){
+// console.log(`http://localhost:8080/users/${userId}`)
+// }
+
+//getUserById(10)
+
+
+
+
+//OOP
+
+//class Insan{
+
+//1- özellikler 2- yapıcı metot 3-function
+
+//constructor(isim, soyisim, yas, maas){ //yapıcı metot
+//this.isim = isim;
+// this.soyisim = soyisim;
+
+// }
+
+
+//bilgileriGoster(){
+//console.log(`İsim : ${this.isim} 
+//Soyisim: ${this.soyisim}
+//Yaş :  ${this.yas}
+//Maaş:  ${this.maas}`
+// )
+// }
+
+// }
+
+//const insan1 = new Insan("Enes","Bayram", 23, 10000);
+//insan1.bilgileriGoster()
+
+//console.log(insan1.isim)
+//Console.log(insan2.isim)
+
+
+
+
+
+
+
+//Static
+
+
+
+//class Insan{
+//static languagesCount=10;
+
+//constructor(firstName, lastName, salary){
+//this.firstName = firstName;
+//this.lastName = lastName;
+//this.salary = salary;
+// }
+
+// }
+
+//writeInfo(){
+//console.log(this.firstName, this.lastName, this.salary, this.languagesCount)
+
+// }
+//}
+
+//Const insan1 = new Insan("Goksu", "Ayaz", "10000");
+
+//insan1.writeInfo();
+//languagesCount static olduğundan çıktıda göremeyiz.
+//nesneler static i göremiyor. 
+
+
+
+//console.log(Insan.languagesCount);  static olduğundan class ismi üzerinden eriştik.
+
+
+//class Matematik{
+// static topla(a,b){
+//console.log(a+b)
+// }
+//class Matematik{
+//cikar(a,b){
+//console.log(a-b)
+// }
+//class Matematik{
+//carp(a,b){
+//console.log(a*b)
+// }
+//class Matematik{
+//bol(a,b){
+//console.log(a/b)
+// }
+
+
+// }
+
+
+
+
+//const matematik = new Matematik();
+//matematik.topla(5,3)
+//matematik.carp(5,7)
+
+
+//static olarak tanımlanmıssa nesne üzerinden erişemezsin
+//sınıf ismi üzerinden erişilir. statick'lere.
+
+//Matematik.topla(10,7);
+
+//static olarak tanımlanmamışsa nesne üzerinden erişilir.
+//Static ise class ismi üzerinden erişilir.
+//Nesne türetmek maliyetli olduğundan static ler utility paketler altında tanımlanır. Date işlemleri yapıyorsun.
+
+//Bir function veya özellik static ise Class a özgüdür. Değilse nesneye özgüdür.
+
+
+
+
+//Inheritance
+
+//class Person{
+
+//firstName ="Enes";
+
+//write(){
+//console.log(this.firstName);
+// }
+// }
+
+
+
+//class Student{
+//firstName = "Enes";
+
+// }
+
+//class Engineer{
+
+// }
+
+//class Farmer{
+
+
+
+// }
+
+
+
+//const person = new Person();
+//person.write();
+
+
+
+//Bir sınıfı miras aldığında özelliklerini ve metotlarını miras almış olursun.
+
+
+//class Student extends Person{
+
+
+//write(){
+//console.log(this.firstName)
+//super.write();
+// }
+
+
+// }
+
+//const student1 = new Student();
+//student1.write();
+
+
+
+
+
+
+//This&Super&Super()
+//super: üst sınıfı gösterir.
+//super()
+
+
+//console.log(this)
+//class Person{
+
+//constructor(firstName){
+// this.firstName = firstName;
+
+// }
+
+//write(){
+//console.log(this);
+//console.log(toString())
+// }
+
+// }
+
+//const person = new Person("Goksu");
+//person.write();
+
+
+
+//console.log(this)
+//class Person{
+//firstName = "Goksu";
+
+//write(){
+//console.log(this.firstName);
+
+// }
+
+// }
+
+
+
+//class Student extends Person{
+//write(){
+//console.log(this)  buradaki this student ı gösteriyor.
+//super.write();
+//bir üst sınıfa gidip write metoduna erişir.
+
+// }
+
+// }
+
+//const student1 = new Student();
+//student1.write();
+
+
+//super miras almış olduğum sınıfı gösteriyor.
+
+
+
+
+
+//class Person{
+//constructor(firstName, lastName, salary){
+//this.firstName = firstName;
+//...
+
+// }
+
+//writeInfo(){
+//console.log(this.firstName, this.lastName, this.salary)
+
+// }
+// }
+
+
+//class Student extends Person{
+//constructor(firstName, lastName, salary){
+//super(firstName, lastName, salary);
+
+// }
+//writeInfo(){
+//super.writeInfo();
+// }
+
+
+
+// }
+
+//const student1 = new Student("Goksu", "Ayaz", "50000");
+//student1.writeInfo();
+
+
+
+
+//class Engineer extends Person{
+//constructor(firstName, lastName, salary){
+//super(firstName, lastName, salary);
+// }
+
+//writeInfo(){
+//super.writeInfo();
+// }
+// }
+
+//const student1 = new Student("Goksu", "Ayaz", 100000);
+//const engineer1 = new Engineer("Enes", "Bayram", 1000);
+
+
+//student1.writeInfo();
+//engineer1.writeInfo();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
