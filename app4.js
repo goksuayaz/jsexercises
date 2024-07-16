@@ -114,6 +114,132 @@
 
 
 
+//CALLBACK 
+
+
+//timing-event-http istekleri
+
+
+//callback-promise-async await 
+
+//calback : bir fonksiyonun bir fonksiyona parametre geçerek asenkron yapıyı senkrona çevrilir.
+
+//bir yerde asenkron problemi varsa kullanılanlardan birisi callback eski bir yöntem, kullanılmıyor.
+
+//function getName(){
+//setTimeout(() => {
+    //servisten ismi 1 saniyede getir
+    //console.log("Goksu");
+// }, 1000);
+// }
+
+
+//function getSurname(){
+//setTimeout(() => {
+    //console.log("Ayaz")
+
+// }, 500);
+
+// }
+
+//getName();
+//getSurname();
+
+
+//önce Soyad sonrasında isim geldi.
+
+
+
+
+//asenkronu senkrona çevireceğiz, 
+
+
+
+//function getName(callback){
+//setTimeout(() => {
+    //servisten ismi 1 saniyede getir.
+    //let name = "Goksu"; //web servisten geldi.
+    //console.log("Goksu");
+    //calback("Goksu");
+// }, 1000);
+// }
+
+
+//function getSurname(){
+//setTimeout(() => {
+    //let surname = "Ayaz";//web servisten geldi
+    //console.log("name, surname")
+
+// }, 500);
+
+// }
+
+//getName(getSurname); 
+
+//1.5 saniyede İsim soyismi getirir.
+
+//callback ile getSurname metodu çalıştırılıyor. Bi fonksiyonu bir fonksiyona parametre geçiyoruz.
+
+
+
+
+//function getUserId(callback){
+//setTimeout(()=> {
+//let userId = 7;
+//calback(userId);
+// }, 1000);
+
+// }
+
+//function getPostByUserId(userId){
+
+//setTimeout(() => {
+    //if(user.userId===userId)
+ //console.log(user.post);  
+// }
+// }) 
+// },500);
+// }
+
+
+//getUserId(getPostByUserId);
+
+
+
+
+
+//AJAX
+
+//tarayici ve server arasını bağlayan AJAX
+
+
+//const xhr = mew XMLHttpRequest();
+//console.log(xhr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
