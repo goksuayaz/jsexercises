@@ -212,9 +212,289 @@
 
 //tarayici ve server arasını bağlayan AJAX
 
+//function prepareURL(url, id){
+//if(id ===null){
+//return url;
+// }
+//return `${url}? postId=${id}`
+
+// }
+
 
 //const xhr = mew XMLHttpRequest();
 //console.log(xhr);
+
+
+//function getComments(url, id){
+//let newURL = prepareURL(url, id);
+//const xhr = mew XMLHttpRequest();
+//xhr.addEventListener("readystatechange", ()=> {
+// if(xhr.readyState===4 && xhr.status===200){
+//console.log(xhr.responseText);  //type ı string
+//console.log(JSON.parse(xhr.responseText)); JSON formatına cevırebılırız.
+// }
+    
+
+// })
+
+
+//xhr.open("GET", newURL )
+//xhr.send();
+
+
+
+// }
+
+//function getData(url){
+
+//const xhr = new XMLHttpRequest();
+//xhr.addEventListener("readystatechange", () => {
+//if(xhr.readyState=== 4 & xhr.status===200){
+//console.log(JSON.parse.(xhr.response));
+// }    
+// })
+
+
+
+
+//xhr.open("GET", url);
+//xhr.send();
+
+// }    
+
+
+
+//getData("https://jspnplaceholder.typicode.com/users"); //users yerine posts ta kullanabilirsin.
+//getComments("https://jsonplaceholder.typicode.com/comments", null) 
+
+
+
+
+
+
+//- PROMISE -
+
+//1-pending
+//2-fulfilled
+//3-rejected
+
+//Başarılı çıktı olursa resolve
+//resolve u yakalayabilmek için .then function ını kullanıyoruz.
+//reject ile sonlanırsa(başarısız olursa) .catch ile yakalanır.
+
+
+//Başarılı olursa resolve .then, başarısız olursa reject .catch ile.
+
+
+
+//let check = true;
+
+//const promise1 = new Promise((resolve, reject) =>{
+    //if(check){
+    //resolve("Promise Başarılı")
+    // }else{
+        //reject("Promise Başarısız...");
+    // }
+
+
+// })
+
+
+//console.log(promise1)
+
+//function createPromise(){
+//return new Promise((resolve, reject) => {
+
+    // if(check){
+    //resolve("Promise te herhangi bir sıkınt yok")
+    // }else{
+        // reject("Sıkıntı var")
+    // }
+// })
+// }
+
+//function createPromise(); Promise<any>
+
+
+
+//createPromise()
+//.then((response) =>{
+    //console.log(response);
+    
+// })
+
+
+//catch((error) =>{
+    //console.log(error)
+    // })
+
+    //.finally(() => console.log("Her zaman çalışır"))
+
+
+//buraya resolve lu döndü .then e geldi, resolve un içindeki değer buraya geçti ve console a yazdı.
+
+//resolve u .then ile reject i catch ile yakalarız.
+
+
+//Asenkron yapıları senkrona çevirmek için kullanıyoruz. Callback yerine.
+
+
+//PROMİSE + XMLHTTREQUEST
+
+
+
+//function readStudents(url){
+
+//return new Promise((resolve, reject) =>{
+    //const xhr = new XMLHttpRequest();
+    //xhr.addEventListener("readystatechange", ()=> {
+
+        //if(xhr.readyState===4 && xhr.status===200){
+        //try{
+        //xhr.addEventListener("readystatechange", ()=> {
+        //if(xhr.readyState===4 && xhr.status===200){
+        //resolve(JSON.parse(xhr.responseText));
+        
+    
+    // }    
+        // })
+        
+    // }catch(error){
+    //reject(error);
+
+    // }
+
+    //xhr.open("GET", url);
+    //xhr.send();
+        
+    
+    // })
+        
+    
+    // }
+
+    //readStudents("students.json")
+    //.then((data) => console.log(data))
+    //.catch((err) => console.log(err))
+
+
+//.then çalıştı.
+
+//function getUsers(url){
+
+// return new Promise((resolve, reject)=>{
+//const xhr = new XMLHttpRequest();
+//xhr.addEventListener("readystatechange", () => {
+    //try{
+//if(xhr.readyState===4 && xhr.status===200){
+//resolve(JSON.parse(xhr.responseText));
+// }     
+// }catch(error){
+//reject(error);
+// }   
+// })
+
+//xhr.open("GET", url)
+//xhr.send();
+// })
+// }
+
+
+//getUsers("https://........../users/3")
+//.then((data) =>{
+//console.log(data)
+//return getCommentsByUserID(`https://........../users/${data.id}`) 
+// });
+
+//.then((res) => console.log(res))
+//.catch((err) => console.log((err))
+//.finally(() =>{
+
+// });
+
+// }
+
+
+    //data.forEach((user) => {
+        ///console.log(user.name)
+    //console.log(data.name)
+    //console.log("Daha sonra")
+//.catch((err) => console.log((err))
+//.finally(() =>{
+
+// });
+
+
+//const p1 = Promise.resolve("Birinci Promise Başarılı")
+//const p2 = Promise.resolvr("İkinci Promise Başarılı")
+//const p3 = new Promise((resolve, reject) =>{
+//resolve("Üçüncü Promise Başarılı")    
+
+// })
+
+//Promise.all([p1,p2,p3])
+//.then((res)=>{
+    //for(let value of res){
+    //console.log(value)    
+// }
+
+// })
+
+// .catch()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
